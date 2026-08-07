@@ -1,0 +1,48 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define TFT_ROTATION 2
+
+#define SCREEN_WIDTH 240
+#define SCREEN_HEIGHT 320
+
+#define PROGRESS_Y 0
+#define PROGRESS_HEIGHT 2
+
+#define HEADER_Y 15
+#define HEADER_LINE_Y 30
+
+#define TITLE_Y 42
+#define TITLE_LINE_Y 58
+
+#define CONTENT_Y 70
+
+#define WIFI_SSID "N0wifiHere"
+#define WIFI_PASSWORD "@PassWeurd"
+
+#define HOSTNAME "3x0c3t-BO4RD"
+
+#define NTP_SERVER "pool.ntp.org"
+
+#define GMT_OFFSET 3600
+#define DAYLIGHT_OFFSET 3600
+
+#define COLOR_BACKGROUND TFT_BLACK
+#define COLOR_TEXT TFT_WHITE
+#define COLOR_PRIMARY TFT_CYAN
+#define COLOR_OK TFT_GREEN
+#define COLOR_ERROR TFT_RED
+
+#define SPLASH_DELAY 3000
+
+// Gestion écrans
+#define CLOCK_SCREEN_TIME 5000
+#define WEATHER_SCREEN_TIME 5000
+#define CLOCK_REFRESH_TIME 1000
+
+#define WEATHER_API_KEY "69ec4c2dd1af2e5c4d950decb50dd528"
+#define WEATHER_CITY "Lille"
+#define WEATHER_COUNTRY "FR"
+#define WEATHER_REFRESH_TIME 60000
+
+#endif
