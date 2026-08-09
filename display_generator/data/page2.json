@@ -1,0 +1,54 @@
+{
+  "name":"page2",
+  "width":240,
+  "height":320,
+  "objects":[
+    {
+      "id":"obj_001",
+      "label":"LigneHaut",
+      "type":"line",
+      "x1":1,
+      "y1":1,
+      "x2":239,
+      "y2":1,
+      "color":"ILI9341_YELLOW",
+      "visible":true
+    },
+    {
+      "id":"obj_002",
+      "label":"Ligne diagonale",
+      "type":"line",
+      "x1":1,
+      "y1":0,
+      "x2":239,
+      "y2":319,
+      "color":"ILI9341_MAGENTA",
+      "visible":true
+    },
+    {
+      "id":"obj_003",
+      "label":"Carré rouge",
+      "type":"shape",
+      "shape":"square",
+      "x":100,
+      "y":50,
+      "width":60,
+      "height":60,
+      "radius":10,
+      "color":"ILI9341_RED",
+      "visible":true
+    },
+    {
+      "id":"obj_004",
+      "label":"Texte bas",
+      "type":"text",
+      "x":2,
+      "y":280,
+      "text":"SAY HELLO OLA",
+      "font":"Default",
+      "size":3,
+      "color":"ILI9341_WHITE",
+      "visible":true
+    }
+  ]
+}

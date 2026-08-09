@@ -1,0 +1,65 @@
+{
+  "name":"page1",
+  "width":240,
+  "height":320,
+  "objects":[
+    {
+      "id":"obj_001",
+      "label":"Cercle rouge",
+      "type":"shape",
+      "shape":"circle",
+      "x":100,
+      "y":100,
+      "radius":50,
+      "color":"ILI9341_RED",
+      "visible":true
+    },
+    {
+      "id":"obj_002",
+      "label":"Titre MELINA",
+      "type":"text",
+      "x":50,
+      "y":50,
+      "text":"MELINA",
+      "font":"Default",
+      "size":5,
+      "color":"ILI9341_YELLOW",
+      "visible":true
+    },
+    {
+      "id":"obj_003",
+      "label":"Texte amour",
+      "type":"text",
+      "x":50,
+      "y":120,
+      "text":"TE QUIERO !",
+      "font":"Default",
+      "size":2,
+      "color":"ILI9341_MAGENTA",
+      "visible":true
+    },
+    {
+      "id":"obj_004",
+      "label":"Ligne diagonale",
+      "type":"line",
+      "x1":150,
+      "y1":150,
+      "x2":200,
+      "y2":200,
+      "color":"ILI9341_CYAN",
+      "visible":true
+    },
+    {
+      "id":"obj_005",
+      "label":"Texte chat",
+      "type":"text",
+      "x":40,
+      "y":210,
+      "text":"ME GUSTA EL GATO",
+      "font":"Default",
+      "size":2,
+      "color":"ILI9341_WHITE",
+      "visible":true
+    }
+  ]
+}

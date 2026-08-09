@@ -1,0 +1,60 @@
+{
+  "name": "page1",
+  "width": 240,
+  "height": 320,
+  "objects": [
+    {
+      "label": "D0N4LD",
+      "type": "text",
+      "x": 32,
+      "y": 22,
+      "text": "D0N4LD",
+      "font": "Default",
+      "size": 2,
+      "color": "TFT_WHITE",
+      "lineWidth": 1,
+      "id": "obj_1786176587458_2261",
+      "visible": true
+    },
+    {
+      "label": "n'EST un Désanusseur",
+      "type": "text",
+      "x": 15,
+      "y": 60,
+      "text": "n'EST qu'un Désanusseur",
+      "font": "Default",
+      "size": 2,
+      "color": "TFT_WHITE",
+      "lineWidth": 1,
+      "id": "obj_1786176948429_5135",
+      "visible": true
+    },
+    {
+      "label": "de DR0SOPHiLES.",
+      "type": "text",
+      "x": 32,
+      "y": 100,
+      "text": "de DR0SOPHiLES.",
+      "font": "Org_01",
+      "size": 2,
+      "color": "TFT_WHITE",
+      "lineWidth": 1,
+      "id": "obj_1786177047635_2877",
+      "visible": true
+    },
+    {
+      "label": "Coeur",
+      "type": "shape",
+      "shape": "rect",
+      "x": 100,
+      "y": 110,
+      "width": 100,
+      "height": 100,
+      "radius": 5,
+      "color": "TFT_BLUE",
+      "lineWidth": 1,
+      "id": "obj_1786177121117_7592",
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "page1",
+  "width": 240,
+  "height": 320,
+  "objects": [
+    {
+      "id": "obj_demo_002",
+      "label": "Rectangle exemple",
+      "type": "shape",
+      "shape": "rect",
+      "x": 50,
+      "y": 80,
+      "width": 80,
+      "height": 40,
+      "color": "TFT_RED",
+      "visible": true,
+      "radius": 5
+    },
+    {
+      "id": "obj_1786124134557_111",
+      "label": "Texte",
+      "type": "text",
+      "x": 50,
+      "y": 50,
+      "text": "HELLO Michel",
+      "font": "Org_01",
+      "size": 3,
+      "color": "TFT_YELLOW",
+      "lineWidth": 1,
+      "visible": true
+    },
+    {
+      "id": "obj_1786124172014_9206",
+      "label": "Ligne",
+      "type": "line",
+      "x1": 1,
+      "y1": 1,
+      "x2": 200,
+      "y2": 200,
+      "color": "TFT_GREEN",
+      "lineWidth": 1,
+      "style": "solid",
+      "visible": true
+    },
+    {
+      "id": "obj_1786124215451_5010",
+      "label": "Ligne",
+      "type": "line",
+      "x1": 250,
+      "y1": 250,
+      "x2": 12,
+      "y2": 90,
+      "color": "TFT_CYAN",
+      "lineWidth": 1,
+      "style": "solid",
+      "visible": true
+    }
+  ]
+}
