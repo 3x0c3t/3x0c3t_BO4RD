@@ -1,0 +1,6 @@
+
+# Configuration locale / secrets
+config.h
+config.local.h
+.env
+.env.*
