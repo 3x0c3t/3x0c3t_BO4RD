@@ -43,26 +43,38 @@
 // H2 | Header2_TextColor: TFT_WHITE
 #define H2_TC TFT_WHITE
 
-// H2 | Header2_ButtonBackgroundColor: 0x18E3
-#define H2_BUTTON_BGC 0x18E3
-
-// H2 | Header2_ButtonBorderColor: TFT_DARKGREY
-#define H2_BUTTON_BC TFT_DARKGREY
-
-// H2 | Header2_LineColor: TFT_DARKGREY
-#define H2_LINE_C TFT_DARKGREY
-
-// H2_MENU | zone cliquable
+// H2_MENU | position et largeur
 #define H2_MENU_X 0
 #define H2_MENU_W 50
 
-// H2_TITLE | zone centrale
+// H2_MENU | Menu_BackgroundColor: 0x18E3
+#define H2_MENU_BGC 0x18E3
+
+// H2_MENU | Menu_BorderColor: TFT_DARKGREY
+#define H2_MENU_BC TFT_DARKGREY
+
+// H2_TITLE | position et largeur
 #define H2_TITLE_X 50
 #define H2_TITLE_W 140
 
-// H2_SETTINGS | zone cliquable
+// H2_TITLE | Title_BackgroundColor: TFT_BLACK
+#define H2_TITLE_BGC TFT_BLACK
+
+// H2_TITLE | Title_BorderColor: TFT_DARKGREY
+#define H2_TITLE_BC TFT_DARKGREY
+
+// H2_SETTINGS | position et largeur
 #define H2_SETTINGS_X 190
 #define H2_SETTINGS_W 50
+
+// H2_SETTINGS | Settings_BackgroundColor: 0x18E3
+#define H2_SETTINGS_BGC 0x18E3
+
+// H2_SETTINGS | Settings_BorderColor: TFT_DARKGREY
+#define H2_SETTINGS_BC TFT_DARKGREY
+
+// H2 | ligne
+#define H2_LINE_C TFT_DARKGREY
 
 // CONTENT | position de départ
 #define CONTENT_Y 40
@@ -70,7 +82,7 @@
 // CONTENT | Content_BackgroundColor: TFT_BLACK
 #define CONTENT_BGC TFT_BLACK
 
-// BUTTON | dimensions générales
+// BUTTON | dimensions
 #define BUTTON_X 10
 #define BUTTON_W 220
 #define BUTTON_H 45

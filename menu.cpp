@@ -1,87 +1,39 @@
 #include "menu.h"
-
-#include <TFT_eSPI.h>
-
 #include "display.h"
-#include "header.h"
-#include "buttons.h"
 #include "settings.h"
-
-
-// ============================================================
-// MENU
-// ============================================================
+#include "buttons.h"
+#include "header.h"
 
 void menuDraw()
 {
-  // ----------------------------------------------------------
-  // Fond
-  // ----------------------------------------------------------
-
-  tft.fillScreen(
-    COLOR_BACKGROUND
-  );
-
-
-  // ----------------------------------------------------------
-  // Header 1
-  // ----------------------------------------------------------
+  tft.fillScreen(CONTENT_BGC);
 
   header1Draw();
+  header2Draw("MENU");
 
-
-  // ----------------------------------------------------------
-  // Header 2
-  // ----------------------------------------------------------
-
-  header2Draw(
-    "MENU"
-  );
-
-
-  // ----------------------------------------------------------
-  // Bouton 1
-  // ----------------------------------------------------------
+  const int startY = CONTENT_Y + 10;
 
   buttonDraw(
     BUTTON_X,
-    CONTENT_Y + 10,
-    BUTTON_WIDTH,
-    BUTTON_HEIGHT,
+    startY,
+    BUTTON_W,
+    BUTTON_H,
     "PAGE 1"
   );
 
-
-  // ----------------------------------------------------------
-  // Bouton 2
-  // ----------------------------------------------------------
-
   buttonDraw(
     BUTTON_X,
-    CONTENT_Y
-      + 10
-      + BUTTON_HEIGHT
-      + BUTTON_SPACING,
-    BUTTON_WIDTH,
-    BUTTON_HEIGHT,
+    startY + BUTTON_H + BUTTON_SPACING,
+    BUTTON_W,
+    BUTTON_H,
     "PAGE 2"
   );
 
-
-  // ----------------------------------------------------------
-  // Bouton 3
-  // ----------------------------------------------------------
-
   buttonDraw(
     BUTTON_X,
-    CONTENT_Y
-      + 10
-      + 2 * (
-        BUTTON_HEIGHT
-        + BUTTON_SPACING
-      ),
-    BUTTON_WIDTH,
-    BUTTON_HEIGHT,
+    startY + (BUTTON_H + BUTTON_SPACING) * 2,
+    BUTTON_W,
+    BUTTON_H,
     "PAGE 3"
   );
 }

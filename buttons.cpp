@@ -1,14 +1,6 @@
 #include "buttons.h"
-
-#include <TFT_eSPI.h>
-
 #include "display.h"
 #include "settings.h"
-
-
-// ============================================================
-// CARRÉ
-// ============================================================
 
 void squareDraw(
   int16_t x,
@@ -21,7 +13,7 @@ void squareDraw(
     y,
     size,
     size,
-    COLOR_SQUARE_BG
+    H1_SQUARE_BGC
   );
 
   tft.drawRect(
@@ -29,14 +21,9 @@ void squareDraw(
     y,
     size,
     size,
-    COLOR_SQUARE_BORDER
+    H1_SQUARE_BC
   );
 }
-
-
-// ============================================================
-// BOUTON
-// ============================================================
 
 void buttonDraw(
   int16_t x,
@@ -46,23 +33,14 @@ void buttonDraw(
   const char *title
 )
 {
-  // ----------------------------------------------------------
-  // Rectangle arrondi
-  // ----------------------------------------------------------
-
   tft.fillRoundRect(
     x,
     y,
     w,
     h,
     BUTTON_RADIUS,
-    COLOR_BUTTON_BG
+    BUTTON_BGC
   );
-
-
-  // ----------------------------------------------------------
-  // Contour
-  // ----------------------------------------------------------
 
   tft.drawRoundRect(
     x,
@@ -70,99 +48,60 @@ void buttonDraw(
     w,
     h,
     BUTTON_RADIUS,
-    COLOR_BUTTON_BORDER
+    BUTTON_BC
   );
 
-
-  // ----------------------------------------------------------
-  // Carré gauche
-  // ----------------------------------------------------------
-
-  int squareX =
+  const int leftSquareX =
     x + 8;
 
-  int squareY =
-    y + (
-      h - BUTTON_LEFT_SQUARE_SIZE
-    ) / 2;
-
+  const int leftSquareY =
+    y + (h - BUTTON_LEFT_SQUARE_SIZE) / 2;
 
   squareDraw(
-    squareX,
-    squareY,
+    leftSquareX,
+    leftSquareY,
     BUTTON_LEFT_SQUARE_SIZE
   );
-
-
-  // ----------------------------------------------------------
-  // TITRE
-  // ----------------------------------------------------------
-
-  tft.setTextColor(
-    COLOR_TITLE,
-    COLOR_BUTTON_BG
-  );
-
-  tft.setTextSize(1);
 
   tft.setTextDatum(
     ML_DATUM
   );
 
+  tft.setTextColor(
+    BUTTON_TITLE_C,
+    BUTTON_BGC
+  );
+
   tft.drawString(
     title,
-    squareX
-      + BUTTON_LEFT_SQUARE_SIZE
-      + 10,
+    leftSquareX + BUTTON_LEFT_SQUARE_SIZE + 10,
     y + h / 2
   );
 
+  const int rightSquareY =
+    y + (h - BUTTON_RIGHT_SQUARE_SIZE) / 2;
 
-  // ----------------------------------------------------------
-  // Carrés de droite
-  // ----------------------------------------------------------
-
-  int rightX =
-    x
-    + w
+  const int rightSquare2X =
+    x + w
     - BUTTON_RIGHT_MARGIN
     - BUTTON_RIGHT_SQUARE_SIZE;
 
-
-  int rightY =
-    y
-    + (
-      h
-      - (
-        BUTTON_RIGHT_SQUARE_SIZE * 2
-        + BUTTON_RIGHT_SPACING
-      )
-    ) / 2;
-
-
-  // ----------------------------------------------------------
-  // Carré supérieur
-  // ----------------------------------------------------------
+  const int rightSquare1X =
+    rightSquare2X
+    - BUTTON_RIGHT_SPACING
+    - BUTTON_RIGHT_SQUARE_SIZE;
 
   squareDraw(
-    rightX,
-    rightY,
+    rightSquare1X,
+    rightSquareY,
     BUTTON_RIGHT_SQUARE_SIZE
   );
 
-
-  // ----------------------------------------------------------
-  // Carré inférieur
-  // ----------------------------------------------------------
-
   squareDraw(
-    rightX,
-    rightY
-      + BUTTON_RIGHT_SQUARE_SIZE
-      + BUTTON_RIGHT_SPACING,
+    rightSquare2X,
+    rightSquareY,
     BUTTON_RIGHT_SQUARE_SIZE
   );
-
 
   tft.setTextDatum(
     TL_DATUM

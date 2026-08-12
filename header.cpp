@@ -1,27 +1,24 @@
 #include "header.h"
-
-#include <TFT_eSPI.h>
-
 #include "display.h"
 #include "settings.h"
 
-// HEADER 1 | affichage
 void header1Draw()
 {
   tft.fillRect(
     0,
-    HEADER1_Y,
+    H1_Y,
     SCREEN_WIDTH,
-    HEADER1_HEIGHT,
-    COLOR_HEADER1_BG
+    H1_H,
+    H1_BGC
   );
 
   tft.setTextSize(1);
-  tft.setTextColor(
-    COLOR_HEADER1_TEXT,
-    COLOR_HEADER1_BG
-  );
   tft.setTextDatum(TL_DATUM);
+
+  tft.setTextColor(
+    H1_TC,
+    H1_BGC
+  );
 
   tft.drawString(
     "12:34:56",
@@ -35,68 +32,68 @@ void header1Draw()
     6
   );
 
-  const int brandX = 125;
-  const int brandY = 3;
-  const int brandW = 65;
-  const int brandH = 14;
+  const int logoX = 125;
+  const int logoY = 3;
+  const int logoW = 65;
+  const int logoH = 14;
 
   tft.fillRect(
-    brandX,
-    brandY,
-    brandW,
-    brandH,
-    COLOR_BRAND_BG
+    logoX,
+    logoY,
+    logoW,
+    logoH,
+    H1_LOGO_BGC
   );
 
   tft.drawRect(
-    brandX,
-    brandY,
-    brandW,
-    brandH,
-    COLOR_BRAND_BORDER
-  );
-
-  tft.setTextColor(
-    COLOR_BRAND_TEXT,
-    COLOR_BRAND_BG
+    logoX,
+    logoY,
+    logoW,
+    logoH,
+    H1_LOGO_BC
   );
 
   tft.setTextDatum(MC_DATUM);
 
+  tft.setTextColor(
+    H1_LOGO_TC,
+    H1_LOGO_BGC
+  );
+
   tft.drawString(
     "- 3X0C3T -",
-    brandX + brandW / 2,
-    brandY + brandH / 2
+    logoX + logoW / 2,
+    logoY + logoH / 2
   );
 
   const int squareSize = 10;
   const int squareSpacing = 4;
-  const int containerPadding = 3;
+  const int padding = 3;
 
   const int containerW =
-    containerPadding * 2 +
-    squareSize * 2 +
-    squareSpacing;
+    padding * 2
+    + squareSize * 2
+    + squareSpacing;
 
   const int containerH =
-    squareSize +
-    containerPadding * 2;
+    squareSize
+    + padding * 2;
 
   const int containerX =
-    SCREEN_WIDTH -
-    containerW -
-    3;
+    SCREEN_WIDTH
+    - containerW
+    - 3;
 
   const int containerY =
-    HEADER1_Y +
-    (HEADER1_HEIGHT - containerH) / 2;
+    H1_Y
+    + (H1_H - containerH) / 2;
 
   tft.fillRect(
     containerX,
     containerY,
     containerW,
     containerH,
-    COLOR_SQUARE_BG
+    H1_SQUARE_BGC
   );
 
   tft.drawRect(
@@ -104,175 +101,181 @@ void header1Draw()
     containerY,
     containerW,
     containerH,
-    COLOR_BRAND_BORDER
+    H1_SQUARE_BC
   );
 
   const int squareY =
-    containerY +
-    containerPadding;
+    containerY + padding;
 
   const int square1X =
-    containerX +
-    containerPadding;
+    containerX + padding;
 
   const int square2X =
-    square1X +
-    squareSize +
-    squareSpacing;
+    square1X
+    + squareSize
+    + squareSpacing;
 
-  tft.fillRect(
+  squareDrawHeader(
     square1X,
     squareY,
-    squareSize,
-    squareSize,
-    COLOR_SQUARE_BG
+    squareSize
   );
 
-  tft.drawRect(
-    square1X,
-    squareY,
-    squareSize,
-    squareSize,
-    COLOR_SQUARE_BORDER
-  );
-
-  tft.fillRect(
+  squareDrawHeader(
     square2X,
     squareY,
-    squareSize,
-    squareSize,
-    COLOR_SQUARE_BG
-  );
-
-  tft.drawRect(
-    square2X,
-    squareY,
-    squareSize,
-    squareSize,
-    COLOR_SQUARE_BORDER
+    squareSize
   );
 
   tft.setTextDatum(TL_DATUM);
 }
 
-// HEADER 2 | affichage
-void header2Draw(const char *title)
+void squareDrawHeader(
+  int16_t x,
+  int16_t y,
+  int16_t size
+)
 {
-  const int y = HEADER2_Y;
-  const int h = HEADER2_HEIGHT;
-
-  // HEADER 2 | zone MENU
   tft.fillRect(
-    HEADER2_MENU_X,
+    x,
     y,
-    HEADER2_MENU_WIDTH,
-    h,
-    COLOR_HEADER2_MENU_BG
+    size,
+    size,
+    H1_SQUARE_BGC
   );
 
   tft.drawRect(
-    HEADER2_MENU_X,
+    x,
     y,
-    HEADER2_MENU_WIDTH,
-    h,
-    COLOR_HEADER2_MENU_BORDER
+    size,
+    size,
+    H1_SQUARE_BC
   );
+}
 
-  // HEADER 2 | zone TITRE
+void header2Draw(
+  const char *title
+)
+{
+  const int y = H2_Y;
+  const int h = H2_H;
+
   tft.fillRect(
-    HEADER2_TITLE_X,
+    H2_MENU_X,
     y,
-    HEADER2_TITLE_WIDTH,
+    H2_MENU_W,
     h,
-    COLOR_HEADER2_TITLE_BG
+    H2_MENU_BGC
   );
 
   tft.drawRect(
-    HEADER2_TITLE_X,
+    H2_MENU_X,
     y,
-    HEADER2_TITLE_WIDTH,
+    H2_MENU_W,
     h,
-    COLOR_HEADER2_TITLE_BORDER
+    H2_MENU_BC
   );
 
-  // HEADER 2 | zone SETTINGS
   tft.fillRect(
-    HEADER2_SETTINGS_X,
+    H2_TITLE_X,
     y,
-    HEADER2_SETTINGS_WIDTH,
+    H2_TITLE_W,
     h,
-    COLOR_HEADER2_SETTINGS_BG
+    H2_TITLE_BGC
   );
 
   tft.drawRect(
-    HEADER2_SETTINGS_X,
+    H2_TITLE_X,
     y,
-    HEADER2_SETTINGS_WIDTH,
+    H2_TITLE_W,
     h,
-    COLOR_HEADER2_SETTINGS_BORDER
+    H2_TITLE_BC
   );
 
-  // HEADER 2 | configuration texte
+  tft.fillRect(
+    H2_SETTINGS_X,
+    y,
+    H2_SETTINGS_W,
+    h,
+    H2_SETTINGS_BGC
+  );
+
+  tft.drawRect(
+    H2_SETTINGS_X,
+    y,
+    H2_SETTINGS_W,
+    h,
+    H2_SETTINGS_BC
+  );
+
   tft.setTextSize(1);
-  tft.setTextDatum(MC_DATUM);
-
-  // HEADER 2 | symbole MENU
   tft.setTextColor(
-    COLOR_HEADER2_TEXT,
-    COLOR_HEADER2_MENU_BG
+    H2_TC,
+    H2_MENU_BGC
   );
+
+  tft.setTextDatum(MC_DATUM);
 
   tft.drawString(
     "☰",
-    HEADER2_MENU_X + HEADER2_MENU_WIDTH / 2,
+    H2_MENU_X + H2_MENU_W / 2,
     y + h / 2
   );
 
-  // HEADER 2 | titre
   tft.setTextColor(
-    COLOR_HEADER2_TEXT,
-    COLOR_HEADER2_TITLE_BG
+    H2_TC,
+    H2_TITLE_BGC
   );
 
   tft.drawString(
     title,
-    HEADER2_TITLE_X + HEADER2_TITLE_WIDTH / 2,
+    H2_TITLE_X + H2_TITLE_W / 2,
     y + h / 2
   );
 
-  // HEADER 2 | symbole SETTINGS
   tft.setTextColor(
-    COLOR_HEADER2_TEXT,
-    COLOR_HEADER2_SETTINGS_BG
+    H2_TC,
+    H2_SETTINGS_BGC
   );
 
   tft.drawString(
     "[*]",
-    HEADER2_SETTINGS_X + HEADER2_SETTINGS_WIDTH / 2,
+    H2_SETTINGS_X + H2_SETTINGS_W / 2,
     y + h / 2
+  );
+
+  tft.drawFastHLine(
+    0,
+    y + h - 1,
+    SCREEN_WIDTH,
+    H2_LINE_C
   );
 
   tft.setTextDatum(TL_DATUM);
 }
 
-// HEADER 2 | test bouton MENU
-bool header2MenuPressed(int16_t x, int16_t y)
+bool header2MenuPressed(
+  int16_t x,
+  int16_t y
+)
 {
   return (
-    x >= HEADER2_MENU_X &&
-    x < HEADER2_MENU_X + HEADER2_MENU_WIDTH &&
-    y >= HEADER2_Y &&
-    y < HEADER2_Y + HEADER2_HEIGHT
+    x >= H2_MENU_X &&
+    x < H2_MENU_X + H2_MENU_W &&
+    y >= H2_Y &&
+    y < H2_Y + H2_H
   );
 }
 
-// HEADER 2 | test bouton SETTINGS
-bool header2SettingsPressed(int16_t x, int16_t y)
+bool header2SettingsPressed(
+  int16_t x,
+  int16_t y
+)
 {
   return (
-    x >= HEADER2_SETTINGS_X &&
-    x < HEADER2_SETTINGS_X + HEADER2_SETTINGS_WIDTH &&
-    y >= HEADER2_Y &&
-    y < HEADER2_Y + HEADER2_HEIGHT
+    x >= H2_SETTINGS_X &&
+    x < H2_SETTINGS_X + H2_SETTINGS_W &&
+    y >= H2_Y &&
+    y < H2_Y + H2_H
   );
 }
