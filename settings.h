@@ -8,76 +8,88 @@
 #define SCREEN_WIDTH 240
 #define SCREEN_HEIGHT 320
 
-// HEADER 1 | position et hauteur
-#define HEADER1_Y 0
-#define HEADER1_HEIGHT 20
+// H1 | position et hauteur
+#define H1_Y 0
+#define H1_H 20
 
-// HEADER 1 | couleurs
-#define COLOR_HEADER1_BG TFT_GREEN
-#define COLOR_HEADER1_TEXT TFT_BLACK
+// H1 | Header1_BackgroundColor: TFT_GREEN
+#define H1_BGC TFT_GREEN
 
-// HEADER 1 | marque
-#define COLOR_BRAND_BG TFT_BLACK
-#define COLOR_BRAND_TEXT TFT_RED
-#define COLOR_BRAND_BORDER TFT_GREEN
+// H1 | Header1_TextColor: TFT_BLACK
+#define H1_TC TFT_BLACK
 
-// HEADER 1 | carrés
-#define COLOR_SQUARE_BG TFT_BLACK
-#define COLOR_SQUARE_BORDER TFT_DARKGREY
+// H1_LOGO | Logo_BackgroundColor: TFT_BLACK
+#define H1_LOGO_BGC TFT_BLACK
 
-// HEADER 2 | position et hauteur
-#define HEADER2_Y 20
-#define HEADER2_HEIGHT 20
+// H1_LOGO | Logo_TextColor: TFT_RED
+#define H1_LOGO_TC TFT_RED
 
-// HEADER 2 | couleurs générales
-#define COLOR_HEADER2_BG TFT_BLACK
-#define COLOR_HEADER2_TEXT TFT_WHITE
-#define COLOR_LINE TFT_DARKGREY
+// H1_LOGO | Logo_BorderColor: TFT_GREEN
+#define H1_LOGO_BC TFT_GREEN
 
-// HEADER 2 | fond zones
-#define COLOR_HEADER2_MENU_BG 0x18E3
-#define COLOR_HEADER2_TITLE_BG TFT_BLACK
-#define COLOR_HEADER2_SETTINGS_BG 0x18E3
+// H1_SQUARE | Square_BackgroundColor: TFT_BLACK
+#define H1_SQUARE_BGC TFT_BLACK
 
-// HEADER 2 | contour zones
-#define COLOR_HEADER2_MENU_BORDER TFT_DARKGREY
-#define COLOR_HEADER2_TITLE_BORDER TFT_DARKGREY
-#define COLOR_HEADER2_SETTINGS_BORDER TFT_DARKGREY
+// H1_SQUARE | Square_BorderColor: TFT_DARKGREY
+#define H1_SQUARE_BC TFT_DARKGREY
 
-// HEADER 2 | zone MENU
-#define HEADER2_MENU_X 0
-#define HEADER2_MENU_WIDTH 50
+// H2 | position et hauteur
+#define H2_Y 20
+#define H2_H 20
 
-// HEADER 2 | zone TITRE
-#define HEADER2_TITLE_X 50
-#define HEADER2_TITLE_WIDTH 140
+// H2 | Header2_BackgroundColor: TFT_BLACK
+#define H2_BGC TFT_BLACK
 
-// HEADER 2 | zone SETTINGS
-#define HEADER2_SETTINGS_X 190
-#define HEADER2_SETTINGS_WIDTH 50
+// H2 | Header2_TextColor: TFT_WHITE
+#define H2_TC TFT_WHITE
 
-// CONTENU | position de départ
+// H2 | Header2_ButtonBackgroundColor: 0x18E3
+#define H2_BUTTON_BGC 0x18E3
+
+// H2 | Header2_ButtonBorderColor: TFT_DARKGREY
+#define H2_BUTTON_BC TFT_DARKGREY
+
+// H2 | Header2_LineColor: TFT_DARKGREY
+#define H2_LINE_C TFT_DARKGREY
+
+// H2_MENU | zone cliquable
+#define H2_MENU_X 0
+#define H2_MENU_W 50
+
+// H2_TITLE | zone centrale
+#define H2_TITLE_X 50
+#define H2_TITLE_W 140
+
+// H2_SETTINGS | zone cliquable
+#define H2_SETTINGS_X 190
+#define H2_SETTINGS_W 50
+
+// CONTENT | position de départ
 #define CONTENT_Y 40
 
-// CONTENU | fond
-#define COLOR_BACKGROUND TFT_BLACK
+// CONTENT | Content_BackgroundColor: TFT_BLACK
+#define CONTENT_BGC TFT_BLACK
 
-// BOUTONS | dimensions générales
+// BUTTON | dimensions générales
 #define BUTTON_X 10
-#define BUTTON_WIDTH 220
-#define BUTTON_HEIGHT 45
+#define BUTTON_W 220
+#define BUTTON_H 45
 #define BUTTON_RADIUS 7
 #define BUTTON_SPACING 8
 
-// BOUTONS | couleurs
-#define COLOR_BUTTON_BG 0x18E3
-#define COLOR_BUTTON_BORDER TFT_WHITE
-#define COLOR_TITLE TFT_WHITE
+// BUTTON | Button_BackgroundColor: 0x18E3
+#define BUTTON_BGC 0x18E3
 
-// BOUTON | carré gauche
+// BUTTON | Button_BorderColor: TFT_WHITE
+#define BUTTON_BC TFT_WHITE
+
+// BUTTON | TitleColor: TFT_WHITE
+#define BUTTON_TITLE_C TFT_WHITE
+
+// BUTTON_LEFT | carré gauche
 #define BUTTON_LEFT_SQUARE_SIZE 18
 
-// BOUTON | carrés droite
+// BUTTON_RIGHT | carrés droite
 #define BUTTON_RIGHT_SQUARE_SIZE 12
 #define BUTTON_RIGHT_MARGIN 8
 #define BUTTON_RIGHT_SPACING 4
