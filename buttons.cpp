@@ -5,7 +5,10 @@
 #include "display.h"
 #include "settings.h"
 
-// BUTTON | carré
+// ============================================================
+// SQUARE
+// ============================================================
+
 void squareDraw(
   int16_t x,
   int16_t y,
@@ -17,7 +20,7 @@ void squareDraw(
     y,
     size,
     size,
-    H1_SQUARE_BGC
+    SQUARE_BGC
   );
 
   tft.drawRect(
@@ -25,11 +28,14 @@ void squareDraw(
     y,
     size,
     size,
-    H1_SQUARE_BC
+    SQUARE_BC
   );
 }
 
-// BUTTON | bouton principal
+// ============================================================
+// BUTTON
+// ============================================================
+
 void buttonDraw(
   int16_t x,
   int16_t y,
@@ -38,6 +44,10 @@ void buttonDraw(
   const char *title
 )
 {
+  // ----------------------------------------------------------
+  // Fond
+  // ----------------------------------------------------------
+
   tft.fillRoundRect(
     x,
     y,
@@ -46,6 +56,10 @@ void buttonDraw(
     BUTTON_RADIUS,
     BUTTON_BGC
   );
+
+  // ----------------------------------------------------------
+  // Bordure
+  // ----------------------------------------------------------
 
   tft.drawRoundRect(
     x,
@@ -56,9 +70,13 @@ void buttonDraw(
     BUTTON_BC
   );
 
-  // BUTTON | titre
+  // ----------------------------------------------------------
+  // Titre
+  // ----------------------------------------------------------
+
   tft.setTextSize(1);
   tft.setTextDatum(MC_DATUM);
+
   tft.setTextColor(
     BUTTON_TC,
     BUTTON_BGC

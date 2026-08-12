@@ -4,7 +4,8 @@
 #include "menu.h"
 
 // ============================================================
-// 3x0c3t BO4RD v3.1
+// 3x0c3t BO4RD
+// Version 3.1
 // ============================================================
 
 void setup()
@@ -18,10 +19,17 @@ void setup()
   Serial.println("       3x0c3t BO4RD v3.1");
   Serial.println("================================");
   Serial.println("[SYSTEM] ESP8266");
+  Serial.println("[DISPLAY] Initialisation...");
 
   displayInit();
 
+  Serial.println("[DISPLAY] OK");
+
+  Serial.println("[UI] MENU");
+
   menuDraw();
+
+  Serial.println("[UI] OK");
 }
 
 void loop()

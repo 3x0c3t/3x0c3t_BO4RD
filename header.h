@@ -3,10 +3,32 @@
 
 #include <stdint.h>
 
-void header1Draw();
-void header2Draw(const char *title);
+// ============================================================
+// HEADER 1
+// ============================================================
 
-bool header2MenuPressed(int16_t x, int16_t y);
-bool header2SettingsPressed(int16_t x, int16_t y);
+void header1Draw();
+
+// ============================================================
+// HEADER 2
+// ============================================================
+
+void header2Draw(
+  const char *title
+);
+
+// ============================================================
+// TOUCH
+// ============================================================
+
+bool header2MenuPressed(
+  int16_t x,
+  int16_t y
+);
+
+bool header2SettingsPressed(
+  int16_t x,
+  int16_t y
+);
 
 #endif
