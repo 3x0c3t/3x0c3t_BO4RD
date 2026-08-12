@@ -1,96 +1,75 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
-// ============================================================
-// 3x0c3t BO4RD v3.1
-// ESP8266 + TFT_eSPI + ILI9341
-// ============================================================
+#include <TFT_eSPI.h>
 
-// ------------------------------------------------------------
-// TFT
-// ------------------------------------------------------------
-
+// TFT | configuration
 #define TFT_ROTATION 2
-
-
-// ------------------------------------------------------------
-// Écran
-// ------------------------------------------------------------
-
-#define SCREEN_WIDTH  240
+#define SCREEN_WIDTH 240
 #define SCREEN_HEIGHT 320
 
+// HEADER 1 | position et hauteur
+#define HEADER1_Y 0
+#define HEADER1_HEIGHT 20
 
-// ------------------------------------------------------------
-// HEADER 1
-// ------------------------------------------------------------
+// HEADER 1 | couleurs
+#define COLOR_HEADER1_BG TFT_GREEN
+#define COLOR_HEADER1_TEXT TFT_BLACK
 
-#define HEADER1_Y       0
-#define HEADER1_HEIGHT  20
+// HEADER 1 | marque
+#define COLOR_BRAND_BG TFT_BLACK
+#define COLOR_BRAND_TEXT TFT_RED
+#define COLOR_BRAND_BORDER TFT_GREEN
 
-
-// ------------------------------------------------------------
-// HEADER 2
-// ------------------------------------------------------------
-
-#define HEADER2_Y       20
-#define HEADER2_HEIGHT 20
-
-
-// ------------------------------------------------------------
-// CONTENU
-// ------------------------------------------------------------
-
-#define CONTENT_Y 40
-
-
-// ------------------------------------------------------------
-// BOUTONS
-// ------------------------------------------------------------
-
-#define BUTTON_X        10
-#define BUTTON_WIDTH    220
-#define BUTTON_HEIGHT   45
-#define BUTTON_RADIUS   7
-#define BUTTON_SPACING  8
-
-
-// ------------------------------------------------------------
-// Carré gauche
-// ------------------------------------------------------------
-
-#define BUTTON_LEFT_SQUARE_SIZE 18
-
-
-// ------------------------------------------------------------
-// Carrés droits
-// ------------------------------------------------------------
-
-#define BUTTON_RIGHT_SQUARE_SIZE 12
-#define BUTTON_RIGHT_MARGIN      8
-#define BUTTON_RIGHT_SPACING     4
-
-
-// ------------------------------------------------------------
-// Couleurs
-// ------------------------------------------------------------
-
-#define COLOR_BACKGROUND    TFT_BLACK
-
-#define COLOR_HEADER1_BG    TFT_GREEN
-#define COLOR_HEADER1_TEXT  TFT_BLACK
-
-#define COLOR_HEADER2_BG    TFT_BLACK
-#define COLOR_HEADER2_TEXT  TFT_WHITE
-
-#define COLOR_LINE          TFT_DARKGREY
-
-#define COLOR_BUTTON_BG     0x18E3
-#define COLOR_BUTTON_BORDER TFT_WHITE
-
-#define COLOR_SQUARE_BG     TFT_BLACK
+// HEADER 1 | carrés
+#define COLOR_SQUARE_BG TFT_BLACK
 #define COLOR_SQUARE_BORDER TFT_DARKGREY
 
-#define COLOR_TITLE         TFT_WHITE
+// HEADER 2 | position et hauteur
+#define HEADER2_Y 20
+#define HEADER2_HEIGHT 20
+
+// HEADER 2 | couleurs
+#define COLOR_HEADER2_BG TFT_BLACK
+#define COLOR_HEADER2_TEXT TFT_WHITE
+#define COLOR_LINE TFT_DARKGREY
+
+// HEADER 2 | zone MENU
+#define HEADER2_MENU_X 0
+#define HEADER2_MENU_WIDTH 50
+
+// HEADER 2 | zone TITRE
+#define HEADER2_TITLE_X 50
+#define HEADER2_TITLE_WIDTH 140
+
+// HEADER 2 | zone SETTINGS
+#define HEADER2_SETTINGS_X 190
+#define HEADER2_SETTINGS_WIDTH 50
+
+// CONTENU | position de départ
+#define CONTENT_Y 40
+
+// CONTENU | fond
+#define COLOR_BACKGROUND TFT_BLACK
+
+// BOUTONS | dimensions générales
+#define BUTTON_X 10
+#define BUTTON_WIDTH 220
+#define BUTTON_HEIGHT 45
+#define BUTTON_RADIUS 7
+#define BUTTON_SPACING 8
+
+// BOUTONS | couleurs
+#define COLOR_BUTTON_BG 0x18E3
+#define COLOR_BUTTON_BORDER TFT_WHITE
+#define COLOR_TITLE TFT_WHITE
+
+// BOUTON | carré gauche
+#define BUTTON_LEFT_SQUARE_SIZE 18
+
+// BOUTON | carrés droite
+#define BUTTON_RIGHT_SQUARE_SIZE 12
+#define BUTTON_RIGHT_MARGIN 8
+#define BUTTON_RIGHT_SPACING 4
 
 #endif
