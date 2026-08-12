@@ -1,7 +1,11 @@
 #include "buttons.h"
+
+#include <TFT_eSPI.h>
+
 #include "display.h"
 #include "settings.h"
 
+// BUTTON | carré
 void squareDraw(
   int16_t x,
   int16_t y,
@@ -25,6 +29,7 @@ void squareDraw(
   );
 }
 
+// BUTTON | bouton principal
 void buttonDraw(
   int16_t x,
   int16_t y,
@@ -51,59 +56,19 @@ void buttonDraw(
     BUTTON_BC
   );
 
-  const int leftSquareX =
-    x + 8;
-
-  const int leftSquareY =
-    y + (h - BUTTON_LEFT_SQUARE_SIZE) / 2;
-
-  squareDraw(
-    leftSquareX,
-    leftSquareY,
-    BUTTON_LEFT_SQUARE_SIZE
-  );
-
-  tft.setTextDatum(
-    ML_DATUM
-  );
-
+  // BUTTON | titre
+  tft.setTextSize(1);
+  tft.setTextDatum(MC_DATUM);
   tft.setTextColor(
-    BUTTON_TITLE_C,
+    BUTTON_TC,
     BUTTON_BGC
   );
 
   tft.drawString(
     title,
-    leftSquareX + BUTTON_LEFT_SQUARE_SIZE + 10,
+    x + w / 2,
     y + h / 2
   );
 
-  const int rightSquareY =
-    y + (h - BUTTON_RIGHT_SQUARE_SIZE) / 2;
-
-  const int rightSquare2X =
-    x + w
-    - BUTTON_RIGHT_MARGIN
-    - BUTTON_RIGHT_SQUARE_SIZE;
-
-  const int rightSquare1X =
-    rightSquare2X
-    - BUTTON_RIGHT_SPACING
-    - BUTTON_RIGHT_SQUARE_SIZE;
-
-  squareDraw(
-    rightSquare1X,
-    rightSquareY,
-    BUTTON_RIGHT_SQUARE_SIZE
-  );
-
-  squareDraw(
-    rightSquare2X,
-    rightSquareY,
-    BUTTON_RIGHT_SQUARE_SIZE
-  );
-
-  tft.setTextDatum(
-    TL_DATUM
-  );
+  tft.setTextDatum(TL_DATUM);
 }
