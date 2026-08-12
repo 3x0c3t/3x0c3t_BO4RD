@@ -2,6 +2,8 @@
 
 #include "display.h"
 #include "menu.h"
+// Pages
+#include "page_1.h"
 
 // ============================================================
 // 3x0c3t BO4RD
